@@ -88,3 +88,11 @@ input[type="text"] {
     outline: 0;
   }
 }
+
+
+// Custom rows and cols
+
+.row-custom {
+  display: flex;
+  justify-content: space-between;
+}
