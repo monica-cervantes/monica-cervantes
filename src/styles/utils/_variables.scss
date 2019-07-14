@@ -7,6 +7,9 @@
 /// Regular font family
 $font-opensans: 'Open Sans';
 
+$font-titillium-web-black: 'Titillium Web Black';
+$font-titillium-web-bold: 'Titillium Web Bold';
+
 /// @type List
 $text-font-stack: $font-opensans, 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
@@ -39,3 +42,7 @@ $dark-grey: #444 !default;
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '../assets/' !default;
+
+// Custom Colors
+$section-color: #f5f5f5;
+$footer-color: #2a3642;

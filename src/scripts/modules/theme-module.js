@@ -15,11 +15,26 @@ AppName.Modules.ThemeModule = (function() {
     });
   };
 
+  var _headerFunction = function() {
+    var windowScroll;
+
+    $(window).on('scroll', function() {
+      windowScroll = $(window).scrollTop();
+
+      if(windowScroll > 30) {
+        $('header').addClass('scrolled');
+      } else {
+        $('header').removeClass('scrolled');
+      }
+    });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
   var init = function() {
     _privateMethod();
+    _headerFunction();
   };
 
   return {

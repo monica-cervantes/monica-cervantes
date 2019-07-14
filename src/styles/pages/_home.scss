@@ -6,7 +6,7 @@
 
 .home {
   transition: all .2s ease-in-out;
-  
+
   .section-banner {
     position: relative;
 
@@ -22,7 +22,7 @@
       bottom: 0;
       right: 0;
 
-      background-color: rgba(0,0,0,.5);
+      background-color: rgba(0,0,0,.7);
     }
 
     .content-wrapper {
@@ -36,7 +36,82 @@
   
       color: $white;
       text-align: center;
-      text-shadow: 0 1px $black;
+      text-shadow: 2px 3px 6px $black;
+    }
+  }
+
+  .section-portfolio {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .section-job-experience {
+    background: $section-color;
+
+    .col-custom {
+      flex: 0 0 31%;
+      padding: 20px;
+
+      text-align: center;
+
+      background: $white;
+    }
+
+    .logo-holder {
+      margin: 0 auto 15px;
+      width: 100px;
+
+      img {
+        border-radius: 100%;
+      }
+    }
+
+    .description-list {
+      padding-left: 0;
+
+      list-style: none; 
+    }
+  }
+
+  .section-education {
+    .col-custom {
+      display: flex;
+      flex: 0 0 48%;
+    }
+
+    .first-side {
+      flex: 0 0 35%;
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .second-side {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex: 0 0 65%;
+      padding: 25px 20px;
+
+      background: $section-color;
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .section-skills {
+    background: $section-color;
+
+    .logo-holder {
+      height: 65px;
+
+      img {
+        width: auto;
+        max-height: 100%;
+      }
     }
   }
 }

@@ -5,3 +5,6 @@
 // -----------------------------------------------------------------------------
 
 @include font-face($font-opensans, $base-url + 'fonts/', 'opensans-regular', 'opensans-regular');
+
+@include font-face($font-titillium-web-black, $base-url + 'fonts/', 'TitilliumWeb-Black', 'TitilliumWeb-Black');
+@include font-face($font-titillium-web-bold, $base-url + 'fonts/', 'TitilliumWeb-Bold', 'TitilliumWeb-Bold');
