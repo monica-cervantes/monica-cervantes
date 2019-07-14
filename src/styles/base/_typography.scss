@@ -14,13 +14,79 @@ body {
 }
 
 .subheading {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   
   font-family: $font-titillium-web-bold;
   font-size: 40px;
   text-align: center;
+}
+
+.job-title,
+.school-name {
+  margin-bottom: 4px;
+
+  font-family: $font-titillium-web-bold;
+  font-size: 31px;
+  line-height: 1.1;
+}
+
+.date {
+  font-size: 12px;
+}
+
+.description-item {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.school-address {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.achievement {
+  font-size: 14px;
+
+  .fas {
+    margin-right: 4px;
+
+    font-size: 14px;
+  }
+}
+  
+@include respond-to(md-down) {
+  .title {
+    margin-bottom: 40px;
+
+    font-size: 36px;
+  }
+
+  .job-title,
+  .school-name {
+    font-size: 25px;
+  }
+
+  .description-item {
+    margin-bottom: 11px;
+  }
+}
+
+@include respond-to(xs) {
+  .heading {
+    font-size: 39px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
 }

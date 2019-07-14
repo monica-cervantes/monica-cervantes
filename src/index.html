@@ -11,7 +11,8 @@
 
   <title>Monica Cervantes</title>
 
-  <link rel="icon" href="./assets/images/favicon.ico">
+  <link rel="icon" href="./assets/images/logo.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="./styles/main.min.css">
   <!--[if lte IE 9]>
     <link href="stylesheets/non-responsive.css" rel="stylesheet" />
@@ -36,14 +37,11 @@
   <header>
     <nav class="navbar navbar-expand-md">
       <div class="container">
-        <a href="#" class="navbar-brand">MC</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a href="#" class="navbar-brand">
+          <img src="assets/images/logo.png" class="img-fluid logo-brand" alt="">
+          <p class="mb-0 name">MONICA CERVANTES</p>
+        </a>
+        <div class="navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a href="tel:09270772480" class="nav-link">
@@ -64,7 +62,7 @@
   <main class="home">
     <div class="section-banner" style="background-image: url(assets/images/bg-banner.jpg)">
       <div class="container">
-        <div class="content-wrapper">
+        <div class="content-wrapper revealOnScroll animated fadeInUp">
           <h1 class="heading">MONICA LOUISE CERVANTES</h1>
           <h3 class="subheading">Front-End Web Developer</h3>
         </div>
@@ -73,37 +71,37 @@
 
     <div class="section-portfolio section-job-experience">
       <div class="container">
-        <h2 class="title">Job Experience</h2>
+        <h2 class="title revealOnScroll">Job Experience</h2>
         <div class="row-custom">
-          <div class="col-custom">
+          <div class="col-custom revealOnScroll delay-1s">
             <div class="logo-holder">
               <img src="assets/images/fullstack.png" class="img-fluid" alt="">
             </div>
             <p class="job-title">Front-End Web Developer</p>
-            <p class="job-date">Sept 2017 - Present</p>
+            <p class="date">Sept 2017 - Present</p>
             <ul class="description-list">
               <li class="description-item">Transform complex PSD layouts into HTML/CSS and Javascript templates</li>
               <li class="description-item">Create responsive Websites</li>
               <li class="description-item">Build websites with Wordpress</li>
             </ul>
           </div>
-          <div class="col-custom">
+          <div class="col-custom revealOnScroll delay-2s">
             <div class="logo-holder">
               <img src="assets/images/fullstack.png" class="img-fluid" alt="">
             </div>
             <p class="job-title">Web Developer Trainor</p>
-            <p class="job-date">April 2019 - Present</p>
+            <p class="date">April 2019 - Present</p>
             <ul class="description-list">
               <li class="description-item">Train new developers</li>
               <li class="description-item">Help them familiarize and apply coding standards and techniques</li>
             </ul>
           </div>
-          <div class="col-custom">
+          <div class="col-custom revealOnScroll delay-3s">
             <div class="logo-holder">
               <img src="assets/images/rivan.jpg" class="img-fluid" alt="">
             </div>
             <p class="job-title">Intern</p>
-            <p class="job-date">Sept 2017 - Present</p>
+            <p class="date">June 2016 - Nov 2016</p>
             <ul class="description-list">
               <li class="description-item">Assist on setting up router and switches used on bootcamps</li>
               <li class="description-item">Assist bootcamp students on fixing issues</li>
@@ -115,23 +113,23 @@
 
     <div class="section-portfolio section-education">
       <div class="container">
-        <h2 class="title">Education</h2>
+        <h2 class="title revealOnScroll">Education</h2>
         <div class="row-custom">
-          <div class="col-custom">
+          <div class="col-custom revealOnScroll delay-1s">
             <div class="first-side" style="background-image: url(assets/images/ust.jpg)"></div>
             <div class="second-side">
               <p class="school-name">University of Santo Tomas</p>
-              <p class="school-year">2013-2017</p>
-              <p class="school-adress">España, Manila</p>
+              <p class="date">June 2013 - June 2017</p>
+              <p class="school-address">España, Manila</p>
               <p class="achievement"><i class="fas fa-trophy"></i> Dean's Lister</p>
             </div>
           </div>
-          <div class="col-custom">
+          <div class="col-custom revealOnScroll delay-2s">
             <div class="first-side" style="background-image: url(assets/images/stscho.jpeg)"></div>
             <div class="second-side">
               <p class="school-name">St. Scholastica's Academy</p>
-              <p class="school-year">2009-2013</p>
-              <p class="school-adress">City of San Fernando, Pampanga</p>
+              <p class="date">June 2009 - May 2013</p>
+              <p class="school-address">City of San Fernando, Pampanga</p>
             </div>
           </div>
         </div>
@@ -140,55 +138,47 @@
 
     <div class="section-portfolio section-skills">
       <div class="container">
-        <h2 class="title">Skills</h2>
+        <h2 class="title revealOnScroll">Skills</h2>
         <div class="row-custom">
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-1s">
             <div class="logo-holder">
               <img src="assets/images/html5.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-2s">
             <div class="logo-holder">
               <img src="assets/images/css3.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-3s">
             <div class="logo-holder">
               <img src="assets/images/javascript.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-4s">
             <div class="logo-holder">
               <img src="assets/images/jquery.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-5s">
             <div class="logo-holder">
               <img src="assets/images/bootstrap.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-6s">
             <div class="logo-holder">
               <img src="assets/images/wp.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-7s">
             <div class="logo-holder">
               <img src="assets/images/photoshop.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
-          <div class="skill-wrapper">
+          <div class="skill-wrapper revealOnScroll delay-8s">
             <div class="logo-holder">
               <img src="assets/images/git.png" class="logo" alt="">
             </div>
-            <p class="skill-name"></p>
           </div>
         </div>
       </div>
@@ -200,7 +190,7 @@
       <ul class="row-custom contact-list">
         <li class="contact-item">
           <i class="fas fa-map-marker-alt"></i>
-          <p class="contact-info address">Guagua, Pampanga</p>
+          <p class="contact-info">Guagua, Pampanga</p>
         </li>
         <li class="contact-item">
           <i class="fas fa-phone"></i>
@@ -208,7 +198,7 @@
         </li>
         <li class="contact-item">
           <i class="fas fa-envelope"></i>
-          <a href="mailto:monicalouisec@gmail.com" class="contact-info email">monicalouisec@gmail.com</a>
+          <a href="mailto:monicalouisec@gmail.com" class="contact-info">monicalouisec@gmail.com</a>
         </li>
       </ul>
     </div>

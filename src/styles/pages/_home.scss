@@ -33,6 +33,7 @@
       justify-content: center;
       align-content: center;
       height: 90vh;
+      min-height: 550px;
   
       color: $white;
       text-align: center;
@@ -41,8 +42,8 @@
   }
 
   .section-portfolio {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   
   .section-job-experience {
@@ -50,7 +51,7 @@
 
     .col-custom {
       flex: 0 0 31%;
-      padding: 20px;
+      padding: 25px 20px;
 
       text-align: center;
 
@@ -68,6 +69,7 @@
 
     .description-list {
       padding-left: 0;
+      margin-bottom: 0;
 
       list-style: none; 
     }
@@ -76,7 +78,8 @@
   .section-education {
     .col-custom {
       display: flex;
-      flex: 0 0 48%;
+      flex: 0 0 48.3%;
+      flex-wrap: wrap;
     }
 
     .first-side {
@@ -88,11 +91,8 @@
     }
 
     .second-side {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
       flex: 0 0 65%;
-      padding: 25px 20px;
+      padding: 30px 35px;
 
       background: $section-color;
 
@@ -112,6 +112,75 @@
         width: auto;
         max-height: 100%;
       }
+    }
+  }
+}
+
+@include respond-to(md-down) {
+  .home {
+    .section-portfolio {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .section-education .second-side {
+      padding: 15px 18px;
+    }
+
+    .section-skills .logo-holder {
+      height: 55px;
+    }
+  }
+}
+
+@include respond-to(sm-down) {
+  .home {
+    .section-banner .content-wrapper {
+      min-height: 440px;
+    }
+
+    .section-job-experience .col-custom,
+    .section-education .col-custom {
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+    }
+
+    .section-education .col-custom {
+      .first-side,
+      .second-side {
+        flex: 0 0 100%;
+      }
+
+      .first-side {
+        height: 300px;
+      }
+
+      .second-side {
+        text-align: center;
+      }
+    }
+
+    .section-skills {
+      padding-bottom: 0;
+
+      .skill-wrapper {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 25%;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .home {
+    .section-banner .content-wrapper {
+      min-height: 400px;
+    }
+
+    .section-education .second-side {
+      padding: 25px 20px;
     }
   }
 }

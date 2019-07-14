@@ -24,7 +24,7 @@ footer {
 
       position: absolute;
       top: 3px;
-      right: -113px;
+      right: -153px;
       z-index: 2;
       
       width: 1px;
@@ -36,6 +36,7 @@ footer {
 
   .fas {
     margin-right: 7px;
+    vertical-align: middle;
 
     color: $white;
   }
@@ -44,6 +45,44 @@ footer {
     display: inline-block;
     margin-bottom: 0;
 
+    font-size: 14px;
     color: $white;
+  }
+}
+
+@include respond-to(lg-down) {
+  footer .contact-item:not(:last-child):before {
+    right: -120px;
+  }
+}
+
+@include respond-to(md-down) {
+  footer .contact-item:not(:last-child):before {
+    right: -58px;
+  }
+}
+
+@include respond-to(sm-down) {
+  footer {
+    .contact-item:not(:last-child):before {
+      right: -16px;
+    }
+
+    .fas {
+      margin-right: 2px;
+
+      font-size: 14px;
+    }
+  }
+}
+
+@include respond-to(xs) {
+  .contact-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-item:before {
+    display: none;
   }
 }

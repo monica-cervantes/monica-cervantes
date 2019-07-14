@@ -29,12 +29,38 @@ AppName.Modules.ThemeModule = (function() {
     });
   }
 
+  var _revealOnScroll = function() {
+    var $window = $(window),
+        win_height_padded = $window.height() * 1.1;
+
+    $window.on('scroll', function() {
+      var scrolled = $window.scrollTop(),
+          win_height_padded = $window.height() * 1.1;
+  
+      $(".revealOnScroll:not(.animated)").each(function () {
+        var $this = $(this),
+            offsetTop = $this.offset().top;
+  
+        if (scrolled + win_height_padded > offsetTop) {
+          if ($this.data('timeout')) {
+            window.setTimeout(function(){
+              $this.addClass('animated fadeInUp');
+            }, parseInt($this.data('timeout'),10));
+          } else {
+            $this.addClass('animated fadeInUp');
+          }
+        }
+      });
+    });
+  }
+
   /////////////////////
   // Public Methods //
   ///////////////////
   var init = function() {
     _privateMethod();
     _headerFunction();
+    _revealOnScroll();
   };
 
   return {
