@@ -3,3 +3,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+
+.btn-white {
+  padding: 13px 30px;
+
+  font-size: 17px;
+  font-weight: bold;
+  
+  background-color: $white;
+  border: 3px solid $white;
+
+  @include on-event() {
+    color: $white;
+    text-decoration: none;
+
+    background-color: transparent;
+  }
+}

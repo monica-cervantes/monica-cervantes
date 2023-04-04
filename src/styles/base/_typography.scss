@@ -10,10 +10,11 @@ body {
 
 .heading {
   font-family: $font-titillium-web-black;
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .subheading {
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -63,7 +64,26 @@ body {
     font-size: 14px;
   }
 }
+
+.job-heading {
+  font-family: $font-titillium-web-black;
+
+  span {
+    font-family: $font-titillium-web-bold;
+    font-size: 21px;
+  }
+}
+
+.job-summary {
+  font-size: 16px;
+}
   
+.company-name {
+  margin-bottom: 0;
+
+  font-family: $font-titillium-web-black;
+}
+
 @include respond-to(md-down) {
   .title {
     margin-bottom: 40px;
