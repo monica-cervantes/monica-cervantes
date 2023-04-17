@@ -66,9 +66,11 @@ body {
 }
 
 .job-heading {
+  color: $brand-color;
   font-family: $font-titillium-web-black;
 
   span {
+    color: $text-color;
     font-family: $font-titillium-web-bold;
     font-size: 21px;
   }
@@ -81,7 +83,13 @@ body {
 .company-name {
   margin-bottom: 0;
 
+  color: $brand-color;
   font-family: $font-titillium-web-black;
+}
+
+.site-title {
+  font-family: $font-titillium-web-bold;
+  font-size: 21px;   
 }
 
 @include respond-to(md-down) {

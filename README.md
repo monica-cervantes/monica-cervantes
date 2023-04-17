@@ -1,11 +1,9 @@
 ## Prerequisites
-* [Install `yarn` package manager](https://yarnpkg.com/lang/en/docs/install/)
+* [Install `npm` package manager]
 
 ## Usage
-* Install dependencies with `yarn install`
-* Run localhost environment with `yarn dev`
-* Build production files with `yarn build`
-* Deploy to `gh-pages` with `yarn deploy`
+* Install dependencies with `npm install`
+* Run localhost environment with `npm run dev`
 
 ## Changelog
 ### 1.2.1

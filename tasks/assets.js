@@ -1,6 +1,6 @@
 'use strict'
 
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const cleanCSS = require('gulp-clean-css')
 const rename = require('gulp-rename')
 const sourcemaps = require('gulp-sourcemaps')
@@ -34,6 +34,12 @@ module.exports = (gulp, path) => {
 
     done()
   })
+
+  gulp.task('sass', function () {
+    return gulp.src('./sass/**/*.scss')
+      .pipe(sass().on('error', sass.logError))
+      .pipe(gulp.dest('./css'));
+  });
 
   gulp.task('assets:js', done => {
     return gulp.src(`${path.baseURL}/**/*.js`)
