@@ -390,8 +390,49 @@
   }
 }
 
+@include respond-to(lg-down) {
+  .home {
+    .section-sites {
+      .screenshot-holder {
+        height: 260px;
+      }
+    } 
+  }
+}
+
 @include respond-to(md-down) {
   .home {
+    .section-banner {
+      .container {
+        height: 65vh;
+      }
+    }
+
+    .section-job-experience {
+      .job {
+        &:before {
+          width: 38px;
+        }
+      }
+
+      .job-summary {
+        margin-bottom: 0;
+      }
+      
+      .col-custom:nth-child(even) .logo-holder {
+        margin: 0 55px 0 10px;
+      }
+
+      .logo-holder {
+        margin: 0 10px 0 63px;
+
+        img {
+          margin-right: 15px;
+          width: 80px;
+        }
+      }
+    }
+
     .section-portfolio {
       padding-top: 40px;
       padding-bottom: 40px;
@@ -404,19 +445,54 @@
     .section-skills .logo-holder {
       height: 55px;
     }
+
+    .section-sites {
+      .screenshot-holder {
+        height: 220px;
+      }
+
+      .info-holder {
+        padding: 18px 0;
+      }
+
+      .site-title {
+        font-size: 28px;
+      }
+    }
   }
 }
 
 @include respond-to(sm-down) {
   .home {
     .section-banner .content-wrapper {
-      min-height: 440px;
+      min-height: 375px;
+      margin-top: 60px;
     }
 
     .section-job-experience .col-custom,
     .section-education .col-custom {
       flex: 0 0 100%;
       margin-bottom: 20px;
+    }
+
+    .section-job-experience {
+      .col-custom {
+        padding: 15px 0px;
+      }
+
+      .job:before {
+        width: 20px;
+      }
+
+      .logo-holder {
+        flex-direction: column;
+        margin: 0 10px 0 40px;
+
+        img {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
     }
 
     .section-education .col-custom {
@@ -444,14 +520,79 @@
         margin-bottom: 40px;
       }
     }
+
+    .section-sites {
+      .row-custom {
+        flex-direction: column;
+      }
+
+      .col-custom:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 
 @include respond-to(xs) {
   .home {
     .section-banner .content-wrapper {
-      min-height: 400px;
+      padding: 58px 20px;
+      min-height: 350px;
+      width: 100%;
     }
+
+    .section-job-experience {
+      &:before {
+        display: none;
+      }
+
+      .col-custom {
+        flex-direction: column-reverse;
+
+        border: 1px solid $platinum;
+        border-radius: 5px;
+        
+        &:before,
+        &:after {
+          display: none;
+        }
+
+        &:nth-child(even) {
+          flex-direction: column-reverse;
+
+          .wrapper {
+            margin-left: auto;
+          }
+        }
+      }
+
+      .job {
+        padding-bottom: 30px;
+        
+        &:before {
+          top: inherit;
+          bottom: 0;
+          left: 50%;
+  
+          width: 90%;
+          
+          border: 1px solid $platinum;
+          border-radius: 5px;
+          
+          transform: translateX(-50%);
+        }
+      }
+      
+      .logo-holder {
+        margin: auto;
+      }
+
+      .wrapper {
+        margin: auto;
+
+        border: 0;
+      }
+    } 
 
     .section-education .second-side {
       padding: 25px 20px;

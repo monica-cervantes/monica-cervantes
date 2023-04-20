@@ -107,6 +107,10 @@ body {
   .description-item {
     margin-bottom: 11px;
   }
+
+  .company-name {
+    font-size: 21px;
+  }
 }
 
 @include respond-to(xs) {
