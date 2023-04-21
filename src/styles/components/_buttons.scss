@@ -10,6 +10,7 @@
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-shadow: none;
 
   border: 3px solid $brand-color;
   border-radius: 5px;
@@ -53,6 +54,20 @@
     color: $white;
 
     background-color: transparent;
+  }
+}
+
+.btn-wtransparent {
+  @extend .btn-transparent;
+
+  color: $white;
+
+  border-color: $white;
+
+  @include on-event() {
+    color: $brand-color;
+
+    background-color: $white;
   }
 }
 

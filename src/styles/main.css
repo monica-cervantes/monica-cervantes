@@ -12123,14 +12123,20 @@ body {
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
+.intro-text {
+  font-size: 52px;
+  line-height: 1;
+}
+
 .heading {
   font-family: "Titillium Web Black";
-  font-size: 45px;
+  font-size: 72px;
+  letter-spacing: 3px;
+  line-height: 1;
 }
 
 .subheading {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .title {
@@ -12379,12 +12385,12 @@ header {
   left: 0;
   right: 0;
   z-index: 9999;
-  background: transparent;
+  background: #fff;
+  box-shadow: 0 1px 10px #ccc;
   transition: all 0.2s ease-in-out;
 }
 header.scrolled {
   background: #fff;
-  box-shadow: 0 1px 10px #ccc;
 }
 header.scrolled .navbar-brand,
 header.scrolled .nav-link {
@@ -12397,26 +12403,32 @@ header.scrolled .navbar-brand {
 header .navbar-brand {
   display: flex;
   align-items: center;
-  max-width: 237px;
+  padding: 0;
   font-family: "Titillium Web Bold";
   letter-spacing: 1.2px;
   line-height: 1.1;
-  color: white;
+  color: #000;
   white-space: normal;
+  background: #3e89a8;
   transition: all 0.1s ease-in-out;
 }
 header .logo-brand {
-  width: 28%;
-  margin-right: 6px;
+  width: 63px;
+  margin-right: 0;
 }
 header .nav-link {
-  color: #fff;
+  color: #000;
+  font-family: "Titillium Web Bold";
 }
 header .nav-link:active, header .nav-link:focus, header .nav-link:hover {
   color: #3e89a8;
 }
 header .socials {
   display: flex;
+}
+header .socials .nav-link {
+  padding: 0;
+  margin: 0.5rem 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -12509,6 +12521,7 @@ footer .contact-info {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 1px;
+  text-shadow: none;
   border: 3px solid #3e89a8;
   border-radius: 5px;
 }
@@ -12529,7 +12542,7 @@ footer .contact-info {
   box-shadow: none;
 }
 
-.btn-transparent:active, .btn-transparent:focus, .btn-transparent:hover {
+.btn-transparent:active, .btn-wtransparent:active, .btn-transparent:focus, .btn-wtransparent:focus, .btn-transparent:hover, .btn-wtransparent:hover {
   color: #fff;
   background-color: #3e89a8;
 }
@@ -12543,6 +12556,15 @@ footer .contact-info {
   background-color: transparent;
 }
 
+.btn-wtransparent {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-wtransparent:active, .btn-wtransparent:focus, .btn-wtransparent:hover {
+  color: #3e89a8;
+  background-color: #fff;
+}
+
 @media screen and (max-width: 991px) {
   .btn {
     padding: 10px 18px;
@@ -12554,28 +12576,9 @@ footer .contact-info {
 .home .section-banner {
   position: relative;
   z-index: 1;
-}
-.home .section-banner:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.home .section-banner .bg-holder {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background-position: center;
-  background-size: cover;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
+  background-image: radial-gradient(circle, #051937, #113253, #1e4d70, #2d6b8c, #3e89a8);
+  background-image: radial-gradient(circle, #377690, #316d86, #2b637c, #265a73, #205169, #1e4b62, #1b465c, #194055, #1a3c50, #1a384b, #1a3446, #1a3041);
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 }
 .home .section-banner .container {
   display: flex;
@@ -12589,15 +12592,38 @@ footer .contact-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  padding: 73px 64px;
+  align-items: flex-start;
+  padding: 0;
+  padding-top: 87px;
   color: #fff;
-  text-align: center;
-  text-shadow: 2px 3px 6px #000;
-  background-color: rgba(30, 30, 30, 0.4);
-  border: 4px solid #f1f1f1;
-  border-radius: 5px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.41);
+  text-align: left;
+  text-shadow: 1px 1px 2px #999;
+}
+.home .section-banner .heading {
+  margin-bottom: 22px;
+}
+.home .section-banner .subheading {
+  margin-bottom: 27px;
+}
+.home .section-banner .img-wrapper {
+  position: relative;
+  bottom: -85px;
+}
+.home .section-banner .img-wrapper:before {
+  content: "";
+  position: absolute;
+  left: 61px;
+  top: -21px;
+  z-index: -1;
+  width: 553px;
+  height: 707px;
+  background-color: rgba(212, 221, 225, 0.19);
+  background-color: rgba(123, 147, 201, 0.93);
+  border-radius: 54% 40% 65% 83%;
+  transform: rotate(-25deg);
+}
+.home .section-banner .img-wrapper .my-pic {
+  top: 90px;
 }
 .home .section-portfolio {
   padding-top: 60px;
@@ -12606,7 +12632,6 @@ footer .contact-info {
 .home .section-job-experience {
   position: relative;
   z-index: 2;
-  background-color: #fff;
 }
 .home .section-job-experience:before {
   content: "";

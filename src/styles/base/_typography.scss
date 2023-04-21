@@ -8,14 +8,20 @@ body {
   font: normal 125% / 1.4 $text-font-stack;
 }
 
+.intro-text {
+  font-size: 52px;
+  line-height: 1;
+}
+
 .heading {
   font-family: $font-titillium-web-black;
-  font-size: 45px;
+  font-size: 72px;
+  letter-spacing: 3px;
+  line-height: 1;
 }
 
 .subheading {
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .title {
